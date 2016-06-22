@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Parallax Plugin Demo</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav').localScroll(800);
+
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0.1);
+	$('#second').parallax("50%", 0.1);
+	$('.bg').parallax("50%", 0.4);
+	$('#third').parallax("50%", 0.3);
+
+})
+</script>
+</head>
+
+<body>
+	<ul id="nav">
+			<li><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#second" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#third" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <!-- <li><a href="#fifth" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li> -->
+			<li><a href="#fourth" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	</ul>
+
+	<div id="intro">
+		<div class="story">
+	    	<div class="float-left">
+			<h2>L’homme et la mer</h2>
+			<h3>Charles Baudelaire</h3>
+	        <p>Homme libre, toujours tu chériras la mer !</br>
+					La mer est ton miroir ; tu contemples ton âme</br>
+					Dans le déroulement infini de sa lame,</br>
+					Et ton esprit n’est pas un gouffre moins amer.</p>
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+
+	<div id="second">
+		<div class="story"><div class="bg"></div>
+	    	<div class="float-right">
+	            <p>Tu te plais à plonger au sein de ton image ;</br>
+							Tu l’embrasses des yeux et des bras, et ton coeur</br>
+							Se distrait quelquefois de sa propre rumeur</br>
+							Au bruit de cette plainte indomptable et sauvage.</p>
+	        </div>
+	    </div> <!--.story-->
+
+	</div> <!--#second-->
+
+	<div id="third">
+		<div class="story">
+	    	<div class="float-left">
+	            <p>Vous êtes tous les deux ténébreux et discrets :</br>
+							Homme, nul n’a sondé le fond de tes abîmes ;</br>
+							Ô mer, nul ne connaît tes richesses intimes,</br>
+							Tant vous êtes jaloux de garder vos secrets !</p>
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#third-->
+
+	<div id="fourth">
+		<div class="story">
+				<div class="float-right">
+							<p>Et cependant voilà des siècles innombrables</br>
+							Que vous vous combattez sans pitié ni remord,</br>
+							Tellement vous aimez le carnage et la mort,</br>
+							Ô lutteurs éternels, ô frères implacables !</p>
+							<h3>Charles Baudelaire</h3>
+					</div>
+			</div> <!--.story-->
+	</div> <!--#fourth-->
